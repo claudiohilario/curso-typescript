@@ -1,2 +1,3 @@
-var a = 'Test Typescript';
+"use strict";
+var a = 'Test Typescript 3';
 console.log(a);

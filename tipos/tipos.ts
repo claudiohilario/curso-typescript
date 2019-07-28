@@ -131,3 +131,10 @@ let functionario2: Funcionario = {
 console.log(functionario.supervisores);
 console.log(functionario.baterPonto(8));
 console.log(functionario.baterPonto(9));
+
+// Union Types
+let nota: number | string = 10;
+console.log(`Minha nota é ${nota}!`);
+
+nota = '10';
+console.log(`Minha nota é ${nota}!`);

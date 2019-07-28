@@ -15,3 +15,9 @@ isBoolean = false;
 var myAge;
 myAge = 27;
 console.log(typeof myAge);
+//Array
+var hobbies = ["Cozinhar", "Praticar Desporto"];
+console.log(hobbies[0]);
+console.log(typeof hobbies);
+hobbies = [100];
+//hobbies = 100;

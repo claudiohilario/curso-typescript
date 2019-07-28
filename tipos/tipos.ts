@@ -18,3 +18,13 @@ isBoolean = false;
 let myAge: any
 myAge = 27;
 console.log(typeof myAge);
+
+//Array
+let hobbies: any[] = ["Cozinhar", "Praticar Desporto"];
+console.log(hobbies[0]);
+console.log(typeof hobbies);
+
+hobbies = [100];
+//hobbies = 100;
+
+

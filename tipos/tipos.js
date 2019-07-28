@@ -21,3 +21,5 @@ console.log(hobbies[0]);
 console.log(typeof hobbies);
 hobbies = [100];
 //hobbies = 100;
+//Tupulas
+var endereco = ["Avenida XPTO", 6300];

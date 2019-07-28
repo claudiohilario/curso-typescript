@@ -27,4 +27,7 @@ console.log(typeof hobbies);
 hobbies = [100];
 //hobbies = 100;
 
+//Tupulas
+let endereco: [string, number] = ["Avenida XPTO", 6300];
+
 

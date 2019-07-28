@@ -40,7 +40,7 @@ enum Cor {
     Vermelho = 100 //100
 }
 
-let minhaCor: Cor = Cor.Verde;
+let minhaCor: Cor = Cor.Laranja;
 
 //Tipo any
 let carro: any = 'BMW';
@@ -138,3 +138,90 @@ console.log(`Minha nota é ${nota}!`);
 
 nota = '10';
 console.log(`Minha nota é ${nota}!`);
+
+// Check types
+
+let valor = 30;
+
+if(typeof valor === "number") {
+    console.log('É um valor number')
+} else {
+    console.log(typeof valor);
+}
+
+// Never
+function falha(msg: string): never {
+    throw new Error(msg);
+}
+
+const produto = {
+    nome: 'Sabão',
+    preco: 4,
+    validarProduto() {
+        if(!this.nome || this.nome.trim().length == 0) {
+            falha('Precisa ter um nome');
+        }
+
+        if(this.preco < 0) {
+            falha('Preço inválido');
+        }
+    }
+};
+
+produto.validarProduto();
+
+
+let altura = 12;
+//altura = null;
+
+let alturaOpcional: null | number = 12;
+alturaOpcional = null;
+
+type Contacto = {
+    nome: string,
+    tel1: string,
+    tel2: string | null
+}
+
+const contacto1: Contacto = {
+    nome: 'Fulano',
+    tel1: '967372428',
+    tel2: null,
+};
+
+let podeSerNulo = null; // fica como default o tipo any
+podeSerNulo = 12;
+
+
+// Desafio:
+
+type ContaBancaria = {
+    saldo: number,
+    depositar: (valor: number) => void
+}
+
+let contaBancaria: ContaBancaria = {
+    saldo: 3456,
+    depositar(valor: number) {
+        this.saldo += valor;
+    }
+}
+
+type Correntista = {
+    nome: string,
+    contaBancaria: ContaBancaria,
+    contactos: string[]
+}
+
+let correntista: Correntista = {
+    nome: 'Ana Silva',
+    contaBancaria: contaBancaria,
+    contactos: ['234912891', '313132434']
+}
+
+correntista.contaBancaria.depositar(3000);
+
+console.log(correntista);
+
+
+

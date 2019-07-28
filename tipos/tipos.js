@@ -33,7 +33,7 @@ var Cor;
     Cor[Cor["Amarelo"] = 12] = "Amarelo";
     Cor[Cor["Vermelho"] = 100] = "Vermelho"; //100
 })(Cor || (Cor = {}));
-var minhaCor = Cor.Verde;
+var minhaCor = Cor.Laranja;
 //Tipo any
 var carro = 'BMW';
 console.log(carro);
@@ -101,3 +101,52 @@ var nota = 10;
 console.log("Minha nota \u00E9 " + nota + "!");
 nota = '10';
 console.log("Minha nota \u00E9 " + nota + "!");
+// Check types
+var valor = 30;
+if (typeof valor === "number") {
+    console.log('É um valor number');
+}
+else {
+    console.log(typeof valor);
+}
+// Never
+function falha(msg) {
+    throw new Error(msg);
+}
+var produto = {
+    nome: 'Sabão',
+    preco: 4,
+    validarProduto: function () {
+        if (!this.nome || this.nome.trim().length == 0) {
+            falha('Precisa ter um nome');
+        }
+        if (this.preco < 0) {
+            falha('Preço inválido');
+        }
+    }
+};
+produto.validarProduto();
+var altura = 12;
+//altura = null;
+var alturaOpcional = 12;
+alturaOpcional = null;
+var contacto1 = {
+    nome: 'Fulano',
+    tel1: '967372428',
+    tel2: null,
+};
+var podeSerNulo = null; // fica como default o tipo any
+podeSerNulo = 12;
+var contaBancaria = {
+    saldo: 3456,
+    depositar: function (valor) {
+        this.saldo += valor;
+    }
+};
+var correntista = {
+    nome: 'Ana Silva',
+    contaBancaria: contaBancaria,
+    contactos: ['234912891', '313132434']
+};
+correntista.contaBancaria.depositar(3000);
+console.log(correntista);

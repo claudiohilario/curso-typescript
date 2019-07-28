@@ -30,4 +30,18 @@ hobbies = [100];
 //Tupulas
 let endereco: [string, number] = ["Avenida XPTO", 6300];
 
+//Enum
+enum Cor {
+    Cinza, //0
+    Verde = 100, //100
+    Azul = 10, //10
+    Laranja, // 11
+    Amarelo, // 12
+    Vermelho = 100 //100
+}
+
+let minhaCor: Cor = Cor.Verde;
+
+console.log('---<<>>', minhaCor)
+
 

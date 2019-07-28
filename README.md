@@ -21,3 +21,9 @@ Code Runner - https://marketplace.visualstudio.com/items?itemName=formulahendry.
 Para utilizar o Code Runner com Typescript é necessário instalar o ts-node `sudo npm install -g ts-node`
 
 Para executar um ficheiro .ts usar as teclas `ctrl + alt + n`
+
+## Compilação à medida que é feito "save"
+
+```
+ tsc -w
+```

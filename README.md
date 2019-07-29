@@ -134,3 +134,28 @@ console.log(`My note is ${note}!`);
 note = '10';
 console.log(`My note is é ${note}!`);
 ```
+**Arrow functions**
+```ts
+const sub = (n1: number, n2: number): number => n1 - n2
+
+```
+
+**Parâmetros Padrão**
+
+```ts 
+function example(start: number = 5,
+    end: number = start - 5): void {
+        console.log(start, end);
+}
+```
+
+**Spread Operator**
+```ts
+function returnArray(...args: number[]): number[] {
+    return args
+}
+
+function example(...params: [number, string, boolean]) {
+    console.log(` --> ${params[0]} ${params[1]} ${params[2]}`)
+}
+```
